@@ -35,5 +35,15 @@ namespace ProjetoCadastro
         {
             Application.Exit();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
