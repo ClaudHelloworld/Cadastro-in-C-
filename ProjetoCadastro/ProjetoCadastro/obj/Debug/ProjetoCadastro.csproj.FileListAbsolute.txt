@@ -39,3 +39,20 @@ C:\Users\Fanta\Desktop\DES.SIS\ProjetoC#\ProjetoCadastro\ProjetoCadastro\obj\Deb
 C:\Users\Fanta\Desktop\DES.SIS\ProjetoC#\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmCliente.resources
 C:\Users\Fanta\Desktop\DES.SIS\ProjetoC#\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmFornecedores.resources
 C:\Users\Fanta\Desktop\DES.SIS\ProjetoC#\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.fmrpesquisausuario.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\bin\Debug\cadastro.mdf
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\bin\Debug\cadastro_log.ldf
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\bin\Debug\ProjetoCadastro.exe.config
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\bin\Debug\ProjetoCadastro.exe
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\bin\Debug\ProjetoCadastro.pdb
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.csprojAssemblyReference.cache
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.fmrpesquisausuario.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmCliente.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmLogin.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmPrincipal.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmUsuario.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.Properties.Resources.resources
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.csproj.GenerateResource.cache
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.csproj.CoreCompileInputs.cache
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.exe
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.pdb
+C:\Users\Fanta\Desktop\Open activities\ProjetoCadastro\ProjetoCadastro\obj\Debug\ProjetoCadastro.frmFornecedor.resources

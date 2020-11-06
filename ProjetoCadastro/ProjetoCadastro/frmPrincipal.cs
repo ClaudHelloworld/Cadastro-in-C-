@@ -27,5 +27,17 @@ namespace ProjetoCadastro
             frmUsuario fu = new frmUsuario();
             fu.ShowDialog();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente fu = new frmCliente();
+            fu.ShowDialog();
+        }
+
+        private void fornecedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFornecedor fu = new frmFornecedor();
+            fu.ShowDialog();
+        }
     }
 }

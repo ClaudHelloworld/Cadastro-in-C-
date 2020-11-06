@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.codigocliente = new System.Windows.Forms.Label();
             this.nomecliente = new System.Windows.Forms.Label();
             this.endereco = new System.Windows.Forms.Label();
@@ -43,10 +45,10 @@
             this.email = new System.Windows.Forms.Label();
             this.tipocliente = new System.Windows.Forms.Label();
             this.rg = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.nm_EstadoTextBox = new System.Windows.Forms.TextBox();
+            this.nm_clienteTextBox = new System.Windows.Forms.TextBox();
+            this.cd_clienteTextBox = new System.Windows.Forms.TextBox();
+            this.sg_nivelTextBox = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -68,6 +70,13 @@
             this.proximobtn = new System.Windows.Forms.Button();
             this.salvarbtn = new System.Windows.Forms.Button();
             this.anteriorbtn = new System.Windows.Forms.Button();
+            this.tb_ClienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cadastroDataSet = new ProjetoCadastro.cadastroDataSet();
+            this.tb_ClienteTableAdapter = new ProjetoCadastro.cadastroDataSetTableAdapters.Tb_ClienteTableAdapter();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            ((System.ComponentModel.ISupportInitialize)(this.tb_ClienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadastroDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // codigocliente
@@ -207,33 +216,33 @@
             this.rg.Text = "RG";
             this.rg.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // nm_EstadoTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(184, 245);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 20);
-            this.textBox1.TabIndex = 15;
+            this.nm_EstadoTextBox.Location = new System.Drawing.Point(184, 245);
+            this.nm_EstadoTextBox.Name = "nm_EstadoTextBox";
+            this.nm_EstadoTextBox.Size = new System.Drawing.Size(79, 20);
+            this.nm_EstadoTextBox.TabIndex = 15;
             // 
-            // textBox2
+            // nm_clienteTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(184, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 20);
-            this.textBox2.TabIndex = 16;
+            this.nm_clienteTextBox.Location = new System.Drawing.Point(184, 93);
+            this.nm_clienteTextBox.Name = "nm_clienteTextBox";
+            this.nm_clienteTextBox.Size = new System.Drawing.Size(245, 20);
+            this.nm_clienteTextBox.TabIndex = 16;
             // 
-            // textBox3
+            // cd_clienteTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(184, 124);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 17;
+            this.cd_clienteTextBox.Location = new System.Drawing.Point(184, 124);
+            this.cd_clienteTextBox.Name = "cd_clienteTextBox";
+            this.cd_clienteTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cd_clienteTextBox.TabIndex = 17;
             // 
-            // textBox4
+            // sg_nivelTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(184, 162);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 18;
+            this.sg_nivelTextBox.Location = new System.Drawing.Point(184, 162);
+            this.sg_nivelTextBox.Name = "sg_nivelTextBox";
+            this.sg_nivelTextBox.Size = new System.Drawing.Size(100, 20);
+            this.sg_nivelTextBox.TabIndex = 18;
             // 
             // textBox5
             // 
@@ -321,6 +330,7 @@
             this.sairbtn.TabIndex = 39;
             this.sairbtn.Text = "Sair";
             this.sairbtn.UseVisualStyleBackColor = true;
+            this.sairbtn.Click += new System.EventHandler(this.sairbtn_Click);
             // 
             // excluirbtn
             // 
@@ -331,6 +341,7 @@
             this.excluirbtn.TabIndex = 38;
             this.excluirbtn.Text = "Excluir";
             this.excluirbtn.UseVisualStyleBackColor = true;
+            this.excluirbtn.Click += new System.EventHandler(this.excluirbtn_Click);
             // 
             // imprimirbtn
             // 
@@ -341,6 +352,7 @@
             this.imprimirbtn.TabIndex = 37;
             this.imprimirbtn.Text = "Imprimir";
             this.imprimirbtn.UseVisualStyleBackColor = true;
+            this.imprimirbtn.Click += new System.EventHandler(this.imprimirbtn_Click_1);
             // 
             // alterarbtn
             // 
@@ -351,6 +363,7 @@
             this.alterarbtn.TabIndex = 36;
             this.alterarbtn.Text = "Alterar";
             this.alterarbtn.UseVisualStyleBackColor = true;
+            this.alterarbtn.Click += new System.EventHandler(this.alterarbtn_Click);
             // 
             // pesquisarbtn
             // 
@@ -361,6 +374,7 @@
             this.pesquisarbtn.TabIndex = 35;
             this.pesquisarbtn.Text = "Pesquisar";
             this.pesquisarbtn.UseVisualStyleBackColor = true;
+            this.pesquisarbtn.Click += new System.EventHandler(this.pesquisarbtn_Click);
             // 
             // novobtn
             // 
@@ -371,6 +385,7 @@
             this.novobtn.TabIndex = 34;
             this.novobtn.Text = "Novo";
             this.novobtn.UseVisualStyleBackColor = true;
+            this.novobtn.Click += new System.EventHandler(this.novobtn_Click);
             // 
             // cancelarbtn
             // 
@@ -381,6 +396,7 @@
             this.cancelarbtn.TabIndex = 33;
             this.cancelarbtn.Text = "Cancelar";
             this.cancelarbtn.UseVisualStyleBackColor = true;
+            this.cancelarbtn.Click += new System.EventHandler(this.cancelarbtn_Click);
             // 
             // proximobtn
             // 
@@ -391,6 +407,7 @@
             this.proximobtn.TabIndex = 32;
             this.proximobtn.Text = "Próximo";
             this.proximobtn.UseVisualStyleBackColor = true;
+            this.proximobtn.Click += new System.EventHandler(this.proximobtn_Click);
             // 
             // salvarbtn
             // 
@@ -401,6 +418,7 @@
             this.salvarbtn.TabIndex = 31;
             this.salvarbtn.Text = "Salvar";
             this.salvarbtn.UseVisualStyleBackColor = true;
+            this.salvarbtn.Click += new System.EventHandler(this.salvarbtn_Click);
             // 
             // anteriorbtn
             // 
@@ -411,6 +429,31 @@
             this.anteriorbtn.TabIndex = 30;
             this.anteriorbtn.Text = "anterior";
             this.anteriorbtn.UseVisualStyleBackColor = true;
+            this.anteriorbtn.Click += new System.EventHandler(this.anteriorbtn_Click);
+            // 
+            // tb_ClienteBindingSource
+            // 
+            this.tb_ClienteBindingSource.DataMember = "Tb_Cliente";
+            this.tb_ClienteBindingSource.DataSource = this.cadastroDataSet;
+            // 
+            // cadastroDataSet
+            // 
+            this.cadastroDataSet.DataSetName = "cadastroDataSet";
+            this.cadastroDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tb_ClienteTableAdapter
+            // 
+            this.tb_ClienteTableAdapter.ClearBeforeFill = true;
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // frmCliente
             // 
@@ -438,10 +481,10 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sg_nivelTextBox);
+            this.Controls.Add(this.cd_clienteTextBox);
+            this.Controls.Add(this.nm_clienteTextBox);
+            this.Controls.Add(this.nm_EstadoTextBox);
             this.Controls.Add(this.rg);
             this.Controls.Add(this.tipocliente);
             this.Controls.Add(this.email);
@@ -461,6 +504,8 @@
             this.Name = "frmCliente";
             this.Text = "frmCliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tb_ClienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cadastroDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,10 +528,10 @@
         private System.Windows.Forms.Label tipocliente;
         public System.Windows.Forms.Label nomecliente;
         private System.Windows.Forms.Label rg;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox nm_EstadoTextBox;
+        private System.Windows.Forms.TextBox nm_clienteTextBox;
+        private System.Windows.Forms.TextBox cd_clienteTextBox;
+        private System.Windows.Forms.TextBox sg_nivelTextBox;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
@@ -508,5 +553,10 @@
         private System.Windows.Forms.Button proximobtn;
         private System.Windows.Forms.Button salvarbtn;
         private System.Windows.Forms.Button anteriorbtn;
+        private System.Windows.Forms.BindingSource tb_ClienteBindingSource;
+        private cadastroDataSet cadastroDataSet;
+        private cadastroDataSetTableAdapters.Tb_ClienteTableAdapter tb_ClienteTableAdapter;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }
